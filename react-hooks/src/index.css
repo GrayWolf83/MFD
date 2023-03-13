@@ -19,3 +19,10 @@ code {
 .block {
   margin-top: 30px;
 }
+
+.hover {
+  width: max-content;
+  text-align: center;
+  margin: 10px auto;
+  cursor: pointer;
+}
