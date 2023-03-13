@@ -1,6 +1,6 @@
-## Репозиторий курса Middle Frontend developer
+# Репозиторий курса Middle Frontend developer
 
-# Урок 4. Свой хук
+## Урок 4. Свой хук
 
 ветка - react-hooks
 
