@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button, Group } from '@mantine/core'
-import { useForm } from '../../hooks/useForm'
+import { useForm } from '../../../hooks/useForm'
+import { Button } from '../../ui/Button'
+import { Row } from '../../ui/Row'
 
 const FormField = ({
 	onSubmit,
@@ -33,9 +34,9 @@ const FormField = ({
 
 				return React.cloneElement(child, config)
 			})}
-			<Group position='center' mt='md'>
+			<Row>
 				<Button type='submit'>{btnSubmitLabel}</Button>
-			</Group>
+			</Row>
 		</form>
 	)
 }

@@ -1,76 +1,72 @@
-import { Button, Group, Box, Title } from '@mantine/core'
-import { signupInitialValues } from '../utils/formInitialValues'
-import { signupValidationSchema } from '../utils/validationSchemas'
-import FormField from './form/FormField'
-import PasswordField from './form/PasswordField'
-import RadioField from './form/RadioField'
-import TextField from './form/TextField'
+import { signupInitialValues } from '../../utils/formInitialValues'
+import { signupValidationSchema } from '../../utils/validationSchemas'
+import { FormField } from '../form/FormField'
+import PasswordInput from '../form/PasswordInput/PasswordInput'
+import RadioInput from '../form/RadioInput/RadioInput'
+import TextInput from '../form/TextInput/TextInput'
+import { Box } from '../ui/Box'
+import { Button } from '../ui/Button'
+import { Row } from '../ui/Row'
+import { Title } from '../ui/Title'
 
 function Signup({ onSubmit, onChangeAuthForm }) {
 	return (
-		<Box maw={300} mx='auto' mt='10vh'>
-			<Title order={3} align='center'>
-				Регистрация
-			</Title>
+		<Box>
+			<Title title='Регистрация' />
 			<FormField
 				onSubmit={onSubmit}
 				initialValues={signupInitialValues}
 				validateSchema={signupValidationSchema}
 				btnSubmitLabel='Регистрация'>
-				<TextField
-					withAsterisk
+				<TextInput
 					label='Имя'
 					placeholder='Ваше имя'
 					name='name'
-					my='md'
+					required
 				/>
-				<TextField
-					withAsterisk
+				<TextInput
 					label='Ник'
-					placeholder='@Ваш ник'
+					placeholder='Ваш ник'
 					name='nick'
-					my='md'
+					icon={'@'}
+					required
 				/>
-				<TextField
-					withAsterisk
+				<TextInput
 					label='Почта'
 					placeholder='Ваша почта'
 					name='email'
-					my='md'
+					type='email'
+					required
 				/>
 
-				<RadioField
+				<RadioInput
 					name='gender'
 					label='Пол'
+					required
 					options={[
 						{ value: 'male', label: 'Мужчина' },
 						{ value: 'female', label: 'Женщина' },
 					]}
-					styles={{ my: 'md' }}
 				/>
 
-				<PasswordField
-					withAsterisk
+				<PasswordInput
 					label='Пароль'
 					placeholder='Ваш пароль'
 					name='password'
-					my='md'
 				/>
 
-				<PasswordField
-					withAsterisk
+				<PasswordInput
 					label='Повтор пароля'
 					placeholder='Повторите пароль'
 					name='repeatPassword'
-					my='md'
 				/>
 			</FormField>
 
-			<Group position='right' mt='md'>
+			<Row position='right'>
 				<Button onClick={() => onChangeAuthForm(true)} variant='subtle'>
 					Войти
 				</Button>
-			</Group>
+			</Row>
 		</Box>
 	)
 }

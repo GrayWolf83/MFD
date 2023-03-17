@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Signin, Signup } from '../components'
+import { Signin } from '../components/Signin'
+import { Signup } from '../components/Signup'
+import Container from '../components/ui/Container/Container'
 
 const Auth = () => {
 	const [isSignin, setAuthForm] = useState(true)
@@ -12,10 +14,20 @@ const Auth = () => {
 		console.log('signup', data)
 	}
 
-	return isSignin ? (
-		<Signin onChangeAuthForm={setAuthForm} onSubmit={handleSigninSubmit} />
-	) : (
-		<Signup onChangeAuthForm={setAuthForm} onSubmit={handleSignupSubmit} />
+	return (
+		<Container>
+			{isSignin ? (
+				<Signin
+					onChangeAuthForm={setAuthForm}
+					onSubmit={handleSigninSubmit}
+				/>
+			) : (
+				<Signup
+					onChangeAuthForm={setAuthForm}
+					onSubmit={handleSignupSubmit}
+				/>
+			)}
+		</Container>
 	)
 }
 

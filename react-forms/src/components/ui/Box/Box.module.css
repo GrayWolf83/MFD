@@ -1,0 +1,7 @@
+.box {
+    width: 400px;
+    padding: 10px 50px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.39);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.39);
+    box-shadow: 0px 0px 8px 1px rgba(34, 60, 80, 0.39);
+}

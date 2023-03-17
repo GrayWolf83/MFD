@@ -36,14 +36,6 @@ export const signupValidationSchema = {
 			return 'Обязательное поле'
 		}
 
-		if (value[0] !== '@') {
-			return 'Ник должен начинаться с @'
-		}
-
-		if (value.length < 2) {
-			return 'Ник должен содержать минимум один сомвол после @'
-		}
-
 		return null
 	},
 	email: (value) => {
