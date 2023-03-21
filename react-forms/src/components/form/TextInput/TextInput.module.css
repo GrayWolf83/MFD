@@ -1,0 +1,35 @@
+.inputBlock {
+    display: flex;
+}
+
+.inputIcon {
+    border-left: none !important;
+    border-top-left-radius: 0 ;
+    border-bottom-left-radius: 0 ;
+}
+
+.inputError {
+    border: 0.0625rem solid var(--error-color);
+    color: var(--error-color);
+}
+
+.inputError::placeholder {
+    color: var(--error-color);
+}
+
+.buttonError {
+    border: 0.0625rem solid var(--error-color) !important;
+    color: var(--error-color) !important;
+}
+
+.button {
+    border: 0.0625rem solid var(--gray-color);
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    background-color: var(--white-color);
+    -webkit-transition: border-color 100ms ease;
+    transition: border-color 100ms ease;
+    min-height: 2.25rem;
+    color: #a0a6ac;
+}
+

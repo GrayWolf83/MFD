@@ -1,0 +1,16 @@
+.inputBlock {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.input {
+    margin: 5px;
+}
+
+.inputLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

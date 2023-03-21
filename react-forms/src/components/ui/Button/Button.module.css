@@ -1,0 +1,22 @@
+.button {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.subtle {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.button:hover {
+    opacity: 0.8;
+}
