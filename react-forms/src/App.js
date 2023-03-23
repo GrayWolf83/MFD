@@ -1,5 +1,7 @@
+import Auth from './pages/auth'
+
 function App() {
-	return <div className='App'>Forms</div>
+	return <Auth />
 }
 
 export default App
