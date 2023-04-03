@@ -1,5 +1,6 @@
 import { NavLink, useParams } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
+import UserPanel from './UserPanel'
 
 const { Header } = Layout
 
@@ -25,13 +26,23 @@ const menuItems = [
 const AppHeader = () => {
 	const { category } = useParams()
 	return (
-		<Header className='header'>
+		<Header
+			style={{
+				position: 'sticky',
+				top: 0,
+				zIndex: 1,
+				width: '100%',
+				display: 'flex',
+				justifyContent: 'space-between',
+				alignItems: 'center',
+			}}>
 			<Menu
 				theme='dark'
 				mode='horizontal'
 				defaultSelectedKeys={category || 'home'}
 				items={menuItems}
 			/>
+			<UserPanel />
 		</Header>
 	)
 }
